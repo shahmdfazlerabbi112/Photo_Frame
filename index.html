@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>নিজের ফটোকার্ড তৈরি করুন</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>নিজের ফটোকার্ড তৈরি করুন</h1>
+  <p>নিজের নাম ও ছবি দিয়ে ফটোকার্ড তৈরি করুন</p>
+</header>
+
+<main class="editor">
+
+  <div class="field">
+    <label for="nameInput">আপনার নাম লিখুন</label>
+    <input
+      type="text"
+      id="nameInput"
+      placeholder="আপনার নাম লিখুন"
+      maxlength="40"
+    >
+  </div>
+
+  <div class="field">
+    <label for="photoInput">নিজের ছবি আপলোড করুন</label>
+    <input
+      type="file"
+      id="photoInput"
+      accept="image/png,image/jpeg,image/webp"
+    >
+  </div>
+
+  <section class="controls">
+
+    <h3>ছবি এডিট করুন</h3>
+
+    <div class="field">
+      <label for="zoom">
+        ছবির আকার
+        <span id="zoomValue">100%</span>
+      </label>
+      <input
+        type="range"
+        id="zoom"
+        min="70"
+        max="200"
+        value="100"
+      >
+    </div>
+
+    <div class="field">
+      <label for="photoVertical">
+        ছবি ওপর-নিচ করুন
+        <span id="verticalValue">0</span>
+      </label>
+      <input
+        type="range"
+        id="photoVertical"
+        min="-200"
+        max="200"
+        value="0"
+      >
+    </div>
+
+    <div class="field">
+      <label for="photoHorizontal">
+        ছবি ডানে-বামে করুন
+        <span id="horizontalValue">0</span>
+      </label>
+      <input
+        type="range"
+        id="photoHorizontal"
+        min="-200"
+        max="200"
+        value="0"
+      >
+    </div>
+
+    <h3>নাম এডিট করুন</h3>
+
+    <div class="field">
+      <label for="nameSize">
+        নামের আকার
+        <span id="nameSizeValue">34</span>
+      </label>
+      <input
+        type="range"
+        id="nameSize"
+        min="18"
+        max="54"
+        value="34"
+      >
+    </div>
+
+  </section>
+
+  <div class="preview">
+    <h3>ফটোকার্ড প্রিভিউ</h3>
+    <p>ছবি বা নামের ওপর ধরে টেনে অবস্থান পরিবর্তন করুন।</p>
+
+    <canvas
+      id="cardCanvas"
+      width="1568"
+      height="1656"
+    ></canvas>
+  </div>
+
+  <div class="buttons">
+    <button id="resetBtn" class="reset">
+      রিসেট
+    </button>
+
+    <button id="downloadBtn">
+      PNG ডাউনলোড
+    </button>
+  </div>
+
+  <p id="status" aria-live="polite"></p>
+
+</main>
+
+<footer>
+  আপনার ছবি ও নাম আপনার ব্রাউজারেই প্রসেস করা হয়।
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
