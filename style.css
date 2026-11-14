@@ -1,0 +1,181 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  background: #f2f5f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #174b32;
+}
+
+header {
+  background: #08743e;
+  color: white;
+  padding: 22px 12px;
+  border-radius: 12px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 27px;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.editor {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #0001;
+}
+
+.field {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #174b32;
+}
+
+label span {
+  color: #08743e;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #08743e;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 25px;
+  padding: 18px;
+  background: #f5f9f5;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.controls h3 {
+  color: #08743e;
+  border-bottom: 1px solid #dce8dd;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.preview {
+  margin-top: 25px;
+}
+
+.preview h3 {
+  font-size: 19px;
+}
+
+.preview p {
+  font-size: 13px;
+  color: #777;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  touch-action: none;
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 14px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #08743e;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.reset {
+  background: #777;
+}
+
+#status {
+  font-size: 13px;
+  color: #08743e;
+  min-height: 18px;
+}
+
+footer {
+  padding: 15px;
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 21px;
+  }
+
+  .editor {
+    padding: 12px;
+  }
+
+  .controls {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
